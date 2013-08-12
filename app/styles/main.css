@@ -38,3 +38,10 @@ table {
     margin: 1em 0;
     clear: both;
 }
+
+table.dataTable tr.odd td.sorting_1 { background-color: #F0F5F8; }
+table.dataTable tr.odd td.sorting_2 { background-color: #DADCFF; }
+table.dataTable tr.odd td.sorting_3 { background-color: #E0E2FF; }
+table.dataTable tr.even td.sorting_1 { background-color: #FCFCFC; }
+table.dataTable tr.even td.sorting_2 { background-color: #F2F3FF; }
+table.dataTable tr.even td.sorting_3 { background-color: #F9F9FF; }

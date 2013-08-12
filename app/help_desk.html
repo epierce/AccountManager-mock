@@ -50,12 +50,6 @@
   </div>
 
   <div class="container">
-    <ul class="breadcrumb">
-      <li><a href="#">Home</a></li>
-      <li><a href="search.html">Search</a></li>
-      <li class="active">badge:1028370</li>
-    </ul>
-    
     <div class="alert">
       <button type="button" class="close" data-dismiss="alert">&times;</button>
       <strong>A directory update is pending for this account.</strong>  Attribute values and access to some resources (MyUSF, etc) may be affected.
@@ -97,26 +91,23 @@
 
              <div class="col-lg-6 col-6">
               <!-- <div class="col-lg-12"> -->
-                <label for="OfficialEmail">Official email address</label>
-                <select id="OfficialEmail" class="form-control input-lg">
-                  <option selected>indiana@usf.edu</option>
-                  <option>henryjones@usf.edu</option>
-                  <option>indiana@cas.usf.edu</option>
-                </select>
+                <h3 style="vertical-align: bottom;"><small>Official email address</small>
+                  <br />indiana@usf.edu
+                </h2>
               </div>
             </div>
 
               <div class="row" style="padding-bottom: 20px;">
                 <div class="col-lg-12">
                   <div class="btn-group btn-group-justified hidden-sm">
-                    <a href="#" class="btn btn-primary btn-small" style="border-right: 1px solid #CEECF5;">Reset Secret Question</a>
-                    <a href="#" class="btn btn-primary btn-small">Lock NetID</a>
-                    <a href="#" class="btn btn-primary btn-small" style="border-left: 1px solid #CEECF5;">Remove VPN Access</a>
+                    <a href="#" class="btn btn-primary btn-small disabled" style="border-right: 1px solid #CEECF5;">Reset Secret Question</a>
+                    <a href="#" class="btn btn-primary btn-small disabled">Lock NetID</a>
+                    <a href="#" class="btn btn-primary btn-small disabled" style="border-left: 1px solid #CEECF5;">Remove VPN Access</a>
                   </div>
                   <div class="btn-group-vertical visible-sm">
-                    <a href="#" class="btn btn-primary btn-small">Reset Secret Question</a>
-                    <a href="#" class="btn btn-primary btn-small" style="border-top: 1px solid #CEECF5;">Lock NetID</a>
-                    <a href="#" class="btn btn-primary btn-small" style="border-top: 1px solid #CEECF5;">Remove VPN Access</a>
+                    <a href="#" class="btn btn-primary btn-small disabled">Reset Secret Question</a>
+                    <a href="#" class="btn btn-primary btn-small disabled" style="border-top: 1px solid #CEECF5;">Lock NetID</a>
+                    <a href="#" class="btn btn-primary btn-small disabled" style="border-top: 1px solid #CEECF5;">Remove VPN Access</a>
                   </div>
                 </div>
             </div>
@@ -145,7 +136,6 @@
                             <dt>NAMS Badge</dt><dd>1028370</dd>
                             <dt>Unumber</dt><dd>U89435271</dd>
                             <dt>EmplID</dt><dd>000000024931</dd>
-                            <dt>Banner PIDM</dt><dd>123456</dd>
                           </dl>
                         </div>
                       </div>
@@ -177,7 +167,7 @@
                           </tr>
                         </tbody>
                       </table>
-                      <p><button class="btn btn-success btn-block" type="button">Change NetID</button></p>              
+                      <p><button class="btn btn-success btn-block disabled" type="button">Change NetID</button></p>              
                     </div>
                   </div>
                 </div>
@@ -239,7 +229,7 @@
                           </tr>      
                         </tbody>
                       </table>
-                      <p><button class="btn btn-success btn-block" type="button">Add Entitlement</button></p>              
+                      <p><button class="btn btn-success btn-block disabled" type="button">Add Entitlement</button></p>              
                     </div>
                   </div>
                 </div>
@@ -267,18 +257,18 @@
                             <td>Sponsor</td>
                             <td>mbrody</td>
                             <td>2013-02-04</td>
-                            <td><a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a></td>
+                            <td><i class="icon-remove text-muted"></i></td>
                           </tr>
                           <tr>
                             <td>Top Men</td>
                             <td>Member</td>
                             <td>sallah</td>
                             <td>2013-04-02</td>
-                            <td><a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a></td>
+                            <td><i class="icon-remove text-muted"></i></td>
                           </tr>
                         </tbody>
                       </table> 
-                      <p><button class="btn btn-success btn-block" type="button">Open Group Manager</button></p>             
+                      <p><button class="btn btn-success btn-block disabled" type="button">Open Group Manager</button></p>             
                     </div>
                   </div>
                 </div>                                
@@ -353,95 +343,31 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-12">  
-          <div class="accordion" id="accordion2-notes">
-            <div class="accordion-group">
-              <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2-notes" href="#collapseOne-notes">
-                  <h4 id="notes">Notes<span class="label label-info pull-right">6</span></h4>
-                </a>
-              </div>
-              <div id="collapseOne-notes" class="accordion-body collapse">
-                <div class="accordion-inner">
-                  <table cellpadding="0" cellspacing="0" border="0" class="table table-striped" id="NotesTable">
-                    <thead>
-                      <tr>
-                        <th>Created</th>
-                        <th>Note Type</th>
-                        <th>Creator</th>
-                        <th>Note</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>2013-07-09 12:52:10</td>
-                        <td><b>Account</b>: netid.usf.edu - NetID - it-collegenet</td>
-                        <td>epierce</td>
-                        <td>Service Account created with update_ldap: Account for CollegeNet testing of Shibboleth connection to 25Live</td>
-                      </tr>
-                      <tr>
-                        <td>2013-07-09 12:52:10</td>
-                        <td><b>Account</b>: usf.edu - ActiveDirectory - it-collegenet</td>
-                        <td>epierce</td>
-                        <td>Service Account created with update_ldap: Account for CollegeNet testing of Shibboleth connection to 25Live</td>
-                      </tr>
-                      <tr>
-                        <td>2013-04-03 14:19:31</td>
-                        <td><b>Account</b>: netid.usf.edu - NetID - provision</td>
-                        <td>epierce</td>
-                        <td>Service Account created with update_ldap: CIMS Active Directory provisioning account</td>
-                      </tr>
-                      <tr>
-                        <td>2013-04-03 14:19:31</td>
-                        <td><b>Account</b></td>
-                        <td>epierce</td>
-                        <td>Service Account created with update_ldap: CIMS Active Directory provisioning account</td>
-                      </tr>
-                      <tr>
-                        <td>2013-03-28 11:14:58</td>
-                        <td><b>Account</b>: netid.usf.edu - NetID - it-sn-discovery</td>
-                        <td>epierce</td>
-                        <td>Service Account created with update_ldap: This account is used for Service Now Discovery</td>
-                      </tr>
-                      <tr>
-                        <td>2013-03-28 11:14:58</td>
-                        <td><b>Account</b>: usf.edu - ActiveDirectory - it-sn-discovery</td>
-                        <td>epierce</td>
-                        <td>Service Account created with update_ldap: This account is used for Service Now Discovery</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <br><button class="btn btn-success pull-right" style="margin-top: 15px;" type="button">Add Note</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
           <div class="col-lg-12">
-            <h2 id="accounts">Accounts</h2>
-
-            <div id="AccountDataTable"></div> 
-            <p><br><button class="btn btn-success pull-right" style="margin-top: 15px;" type="button">Add Account</button></p>
-                     
+            <h2 id="accounts"></a>Accounts</h2>
+            <div id="AccountDataTable"></div>  
+            <p><br><button class="btn btn-success pull-right disabled" style="margin-top: 15px;" type="button">Add Account</button></p>
+                                         
           </div>
 
       </div>
       <hr>    
+      <div class="row">
+          <div class="col-lg-12">
 
+          </div>
+      </div>
       <footer>      </footer>
   </div> <!-- /container -->  
 </div>
-
     <script src="bower_components/jquery/jquery.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/datatables/media/js/jquery.dataTables.js"></script>
-    
+
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/paging.js"></script>
     <!-- endbuild -->
-    
+
     <script>
       $('#GAtooltip').tooltip();
       $('#VPNtooltip').tooltip();
@@ -450,7 +376,6 @@
             $.extend( $.fn.dataTableExt.oStdClasses, {
               "sWrapper": "dataTables_wrapper form-inline"
             } );
-            $('#NotesTable').dataTable();
             $('#AffiliationsTable').dataTable({
                 "sDom": "<'row'<'span6'l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
                 "iDisplayLength": 5, 
@@ -468,16 +393,16 @@
                 "iDisplayLength": 5,
                 "aLengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]],
                 "aaData": [
-                    [ "henryjones@museum.org", "Exchange", "Deleted", '<a href="#myModal"><i class="icon-pencil"></i></a> <a href="#myModal"><i class="icon-remove"></i></a>'],
-                    [ "henryjones@usf.edu", "Alias", "Active", '<a href="#myModal"><i class="icon-pencil"></i></a> <a href="#myModal"><i class="icon-remove"></i></a>'],
-                    [ "indiana@usf.edu", "Exchange", "Active", '<a href="#myModal"><i class="icon-pencil"></i></a> <a href="#myModal"><i class="icon-remove"></i></a>'],
-                    [ "indiana@FAST-PRO", "PeopleSoftFM", "Active", '<a href="#myModal"><i class="icon-pencil"></i></a> <a href="#myModal"><i class="icon-remove"></i></a>'],
-                    [ "000000024931@GEMS-PRO", "PeopleSoftSS", "Active", '<a href="#myModal"><i class="icon-pencil"></i></a> <a href="#myModal"><i class="icon-remove"></i></a>'],
-                    [ "indiana@rc.usf.edu", "UNIX", "Active", '<a href="#myModal"><i class="icon-pencil"></i></a> <a href="#myModal"><i class="icon-remove"></i></a>'],
-                    [ "indiana@cas.usf.edu", "Alias", "Active", '<a href="#myModal"><i class="icon-pencil"></i></a> <a href="#myModal"><i class="icon-remove"></i></a>'],
-                    [ "indiana@GEMS-PRO", "PeopleSoftHR", "Active", '<a href="#myModal"><i class="icon-pencil"></i></a> <a href="#myModal"><i class="icon-remove"></i></a>'],
-                    [ "indiana@snakes.it.usf.edu", "UNIX", "Active", '<a href="#myModal"><i class="icon-pencil"></i></a> <a href="#myModal"><i class="icon-remove"></i></a>'],
-                    [ "junior@grail-search.org", "Contact", "Active" , '<a href="#myModal"><i class="icon-pencil"></i></a> <a href="#myModal"><i class="icon-remove"></i></a>']
+                    [ "henryjones@museum.org", "Exchange", "Deleted", '<i class="icon-pencil text-muted"></i> <i class="icon-remove text-muted"></i>'],
+                    [ "henryjones@usf.edu", "Alias", "Active", '<i class="icon-pencil text-muted"></i> <i class="icon-remove text-muted"></i>'],
+                    [ "indiana@usf.edu", "Exchange", "Active", '<i class="icon-pencil text-muted"></i> <i class="icon-remove text-muted"></i>'],
+                    [ "indiana@FAST-PRO", "PeopleSoftFM", "Active", '<i class="icon-pencil text-muted"></i> <i class="icon-remove text-muted"></i>'],
+                    [ "000000024931@GEMS-PRO", "PeopleSoftSS", "Active", '<i class="icon-pencil text-muted"></i> <i class="icon-remove text-muted"></i>'],
+                    [ "indiana@rc.usf.edu", "UNIX", "Active", '<i class="icon-pencil text-muted"></i> <i class="icon-remove text-muted"></i>'],
+                    [ "indiana@cas.usf.edu", "Alias", "Active", '<i class="icon-pencil text-muted"></i> <i class="icon-remove text-muted"></i>'],
+                    [ "indiana@GEMS-PRO", "PeopleSoftHR", "Active", '<i class="icon-pencil text-muted"></i> <i class="icon-remove text-muted"></i>'],
+                    [ "indiana@snakes.it.usf.edu", "UNIX", "Active", '<i class="icon-pencil text-muted"></i> <i class="icon-remove text-muted"></i>'],
+                    [ "junior@grail-search.org", "Contact", "Active" , '<i class="icon-pencil text-muted"></i> <i class="icon-remove text-muted"></i>']
                 ],
                 "aoColumns": [
                     { "sTitle": "Account" },

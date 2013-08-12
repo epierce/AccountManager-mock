@@ -106,7 +106,8 @@ module.exports = function (grunt) {
     },
     jshint: {
       options: {
-        jshintrc: '.jshintrc'
+        jshintrc: '.jshintrc',
+        jshintignore: '.jshintignore'
       },
       all: [
         'Gruntfile.js',
@@ -281,7 +282,7 @@ module.exports = function (grunt) {
       dist: {
         files: {
           '<%= yeoman.dist %>/scripts/scripts.js': [
-            '<%= yeoman.dist %>/scripts/scripts.js'
+            '<%= yeoman.app %>/scripts/*.js'
           ]
         }
       }
