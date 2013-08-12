@@ -109,8 +109,8 @@
                   </div>
                   <div class="btn-group-vertical visible-sm">
                     <a href="#" class="btn btn-primary btn-small">Reset Secret Question</a>
-                    <a href="#" class="btn btn-primary btn-small" style="border-top: 1px solid #CEECF5;">Unlock NetID</a>
-                    <a href="#" class="btn btn-primary btn-small disabled" style="border-top: 1px solid #CEECF5;">Remove VPN Access</a>
+                    <a href="#" class="btn btn-primary btn-small" style="border-top: 1px solid #CEECF5;">Lock NetID</a>
+                    <a href="#" class="btn btn-primary btn-small" style="border-top: 1px solid #CEECF5;">Remove VPN Access</a>
                   </div>
                 </div>
             </div>
@@ -287,7 +287,7 @@
                 <li><h3 style="margin-top: 10px;"><small>usfEduPrimaryAffiliation</small><br>Faculty</h4></li>
               </ul>
             </div>
-              <table class="table table-condensed">
+              <table cellpadding="0" cellspacing="0" border="0" class="table table-striped" id="AffiliationsTable">
                 <thead>
                   <tr>
                     <th></th>
@@ -310,6 +310,37 @@
                     <td><h4>Head Artifact Finder<br><small>Museum</small></h5></td>
                     <td><h5>2004-08-12</h5></td>
                     <td><h5>Present</h5></td>
+                  </tr>
+
+                  <tr>
+                    <td><h4>Instructor<br><small>Bull Whip 101</small></h4></td>
+                    <td><h5>2003-07-01</h5></td>
+                    <td><h5>Present</h5></td>
+                  </tr>
+                  <tr class="active">
+                    <td class="text-muted"><h5>Student<br><small>Herpetology</small></h5></td>
+                    <td class="text-muted">2000-08-01</td>
+                    <td class="text-muted">2000-08-02</td>
+                  </tr>
+                  <tr class="active">
+                    <td class="text-muted"><h5>Student<br><small>Herpetology</small></h5></td>
+                    <td class="text-muted">2000-07-01</td>
+                    <td class="text-muted">2000-07-02</td>
+                  </tr>
+                  <tr class="active">
+                    <td class="text-muted"><h5>Student<br><small>Herpetology</small></h5></td>
+                    <td class="text-muted">2000-06-01</td>
+                    <td class="text-muted">2000-06-02</td>
+                  </tr>
+                  <tr class="active">
+                    <td class="text-muted"><h5>Assistant Professor<br><small>Archaeology</small></h5></td>
+                    <td class="text-muted">2000-4-04</td>
+                    <td class="text-muted">2000-4-15</td>
+                  </tr>
+                  <tr class="active">
+                    <td class="text-muted"><h5>Student<br><small>Herpetology</small></h5></td>
+                    <td class="text-muted">2000-03-01</td>
+                    <td class="text-muted">2000-03-02</td>
                   </tr>
                 </tbody>
               </table>
@@ -337,17 +368,29 @@
     <script src="bower_components/jquery/jquery.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/datatables/media/js/jquery.dataTables.js"></script>
+    <script src="scripts/paging.js"></script>
     <script>
-      $('#GAtooltip').tooltip('hide');
-      $('#VPNtooltip').tooltip('hide');
+      $('#GAtooltip').tooltip();
+      $('#VPNtooltip').tooltip();
       $('#WiFitooltip').tooltip();
       $(document).ready(function() {
-            $('#AccountDataTable').html( '<table cellpadding="0" cellspacing="0" border="0" class="table table-condensed" id="example"></table>' );
-
-            $.extend( $.fn.dataTable.defaults, {
-        "bFilter": false,
-    } );
+            $.extend( $.fn.dataTableExt.oStdClasses, {
+              "sWrapper": "dataTables_wrapper form-inline"
+            } );
+            $('#AffiliationsTable').dataTable({
+                "sDom": "<'row'<'span6'l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
+                "iDisplayLength": 5, 
+                "aaSorting": [[1,'desc'],[2,'asc']],
+                "bFilter": false,
+                "bLengthChange": false,
+                "bSort": false,
+                "bInfo": false,
+                "sPaginationType": "bootstrap"
+            });
+            $('#AccountDataTable').html( '<table cellpadding="0" cellspacing="0" border="0" class="table table-striped" id="example"></table>' );
             $('#example').dataTable( {
+                "sDom": "<'row'<'span6'l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
+                "sPaginationType": "bootstrap",
                 "iDisplayLength": 5,
                 "aLengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]],
                 "aaData": [
