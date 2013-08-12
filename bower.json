@@ -2,7 +2,7 @@
   "name": "accountManMock",
   "version": "0.1.0",
   "dependencies": {
-    "json3": "~3.2.4","es5-shim": "~2.0.8","font-awesome":"~3.2.1","bootstrap":"~3.0.0"
+    "json3": "~3.2.4","es5-shim": "~2.0.8","font-awesome":"~3.2.1","bootstrap":"~3.0.0","angular-ui-bootstrap-bower":"~0.5.0","angular":"~1.0.7","datatables":"~1.9.4"
   },
   "devDependencies": {
   }
