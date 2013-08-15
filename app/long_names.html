@@ -74,7 +74,7 @@
         <div class="row">
           <!-- Photo Box -->
           <div class="col-lg-12">
-          <a data-toggle="modal" href="#user-photo-modal" id="user-phot-link">
+          <a data-toggle="modal" href="#user-photo-modal" id="user-photo-link">
             <img class="pull-left" style="padding-right: 5px;" src="images/1028370.jpg" height="75" alt="User picture" id="user-picture" >
           </a>
             <h2 style="margin-top: 5px;"><small>NetID</small> 
@@ -128,28 +128,40 @@
                       <dt>
                         <h4 class="biodem-attrib-title">
                           Primary Email
-                          <a href="#myModal"><i class="icon-pencil pull-right"></i></a>
+                          <a data-toggle="modal" href="#email-edit-modal">
+                            <i class="icon-pencil pull-right"></i>
+                          </a>
                         </h4>
                       </dt><dd>vanessacellini567890@usf.edu</dd>
                       <dt>
                         <h4 class="biodem-attrib-title">
                           First Name
-                          <a href="#myModal"><i class="icon-pencil pull-right"></i></a>
+                          <a data-toggle="modal" href="#name-edit-modal">
+                            <i class="icon-pencil pull-right"></i>
+                          </a>
                         </h4>
                       </dt><dd>Ani<br><small class="text-muted">Anushree Vyasarayamutt Shyamaharya</small></dd>
                       <dt>
                         <h4 class="biodem-attrib-title">
                           Middle Name
-                          <a href="#myModal"><i class="icon-pencil pull-right"></i></a>
+                          <a data-toggle="modal" href="#name-edit-modal">
+                            <i class="icon-pencil pull-right"></i>
+                          </a>
                         </h4>
                       </dt><dd>Marie Emmanuelle Jocelyne Cedric</dd>
                       <dt>
                         <h4 class="biodem-attrib-title">
                           Last Name
-                          <a href="#myModal"><i class="icon-pencil pull-right"></i></a>
+                          <a data-toggle="modal" href="#name-edit-modal">
+                            <i class="icon-pencil pull-right"></i>
+                          </a>
                         </h4>
                       </dt><dd>Nanayakkara Jayasuriya Appuhamillage</dd>
-                      <dt><h4 class="biodem-attrib-title">Nickname</h4></dt><dd>AnushreeVyasarayamuttShyamaharya</dd>
+                      <dt>
+                        <h4 class="biodem-attrib-title">
+                          Generation Qualifier
+                        </h4>
+                      </dt><dd>Jr</dd>
                     </dl>
                   </div>
 
@@ -450,15 +462,97 @@
       <footer>      </footer>
   </div> <!-- /container -->  
 </div>
-
+<!-- View User Photo -->
 <div class="modal fade" id="user-photo-modal" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        &nbsp;<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
       </div>
       <div class="modal-body">
         <img src="images/1028370.jpg" alt="User picture" id="user-picture" >
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- Update Primary Email Address -->
+<div class="modal fade" id="email-edit-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Edit Primary Email Address</h4>
+      </div>
+      <div class="modal-body">
+        <p>
+          <label for="PrimaryEmailEdit">Primary email address</label>
+          <select id="PrimaryEmailEdit" class="form-control input-lg">
+            <option selected>indiana@usf.edu</option>
+            <option>henryjones@usf.edu</option>
+            <option>indiana@cas.usf.edu</option>
+          </select>
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- Modify Names -->
+<div class="modal fade" id="name-edit-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Edit Display Names</h4>
+      </div>
+      <div class="modal-body">
+        <div class="well">
+          <label for="official-names-well">Official Name Data</label>
+          <div class="row" id="official-names-well">
+            <div class="col-lg-4">
+              <h4>First Name</h4>
+              Anushree Vyasarayamutt Shyamaharya
+            </div>
+            <div class="col-lg-4">
+              <h4>Middle Name</h4>
+              Marie Emmanuelle Jocelyne Cedric
+            </div>
+            <div class="col-lg-4">
+              <h4>Last Name</h4>
+              Nanayakkara Jayasuriya Appuhamillage
+            </div>
+          </div>
+        </div> <!-- /well -->
+      </div>
+      <div class="row">
+          <div class="col-8 col-offset-2">
+            <form role="form">
+              <fieldset>
+                <div class="form-group">
+                  <label for="edit-first-name">First Name</label>
+                  <input type="text" class="form-control" id="edit-first-name" placeholder="" value="Ani">
+                </div>
+                <div class="form-group">
+                  <label for="edit-middle-name">Middle Name</label>
+                  <input type="text" class="form-control" id="edit-middle-name" placeholder="">
+                </div>
+                <div class="form-group">
+                  <label for="edit-last-name">Last Name</label>
+                  <input type="text" class="form-control" id="edit-last-name" placeholder="">
+                </div>
+              </fieldset>
+            </form>
+
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
