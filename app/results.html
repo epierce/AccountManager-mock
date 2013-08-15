@@ -1,0 +1,131 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- build:css({.tmp,app}) styles/main.css -->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="bower_components/datatables/media/css/jquery.dataTables.css">
+        <link rel="stylesheet" href="styles/ColVis.css">
+
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+  </head>
+  <body ng-app="accountManMockApp">
+    <!--[if lt IE 7]>
+      <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+      <script src="bower_components/es5-shim/es5-shim.js"></script>
+      <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+    <div class="container">
+      <div class="navbar navbar-fixed-top">
+        <!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <a class="navbar-brand" href="index.html">AccountManager</a>
+        <div class="nav-collapse collapse navbar-responsive-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="search.html">Search</a></li>
+          </ul>
+          <form class="navbar-form pull-right">
+            <input type="text" class="form-control" style="width: 200px;">
+            <button type="submit" class="btn btn-default">Search</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="container">
+        <ul class="breadcrumb">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="search.html">Search</a></li>
+          <li class="active">Results for <b>fn:indiana</b></li>
+        </ul>
+        
+        <div class="row">
+          <div class="col-lg-12">
+            <div id="results-data-table"></div> 
+          </div>
+        </div>
+        <hr>    
+
+        <footer>      </footer>
+      </div> <!-- /container -->  
+    </div>
+
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/datatables/media/js/jquery.dataTables.js"></script>
+    <script src="bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+    
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/ColVis.js"></script>
+    <!-- endbuild -->
+    
+    <script>
+      $(document).ready(function() {
+            $.extend( $.fn.dataTableExt.oStdClasses, {
+              "sWrapper": "dataTables_wrapper form-inline"
+            } );
+            
+            $('#results-data-table').html( '<table cellpadding="0" cellspacing="0" border="0" class="table" id="result-data"></table>' );
+            var oTable = $('#result-data').dataTable( {
+                "sDom": "<'row'<'col-lg-12'C>><'<'row'<'col-lg-4'l><'col-lg-6-offset-2'f>r>t<'row'<'col-lg-4'i><'col-lg-4'p>>",
+                "oColVis": {
+                  "sSize": "css"
+                },
+                "oLanguage": {
+                  "sSearch": "Filter:"
+                },
+                "sPaginationType": "bootstrap",
+                "aaData": [
+                    ["1028370","Jones","Indiana","","indiana","U89435271","000000024931","123456","indiana@usf.edu","1899-07-01","Archaeology","Arts & Sciences","Faculty","Faculty"],
+                    ["1028371","Jones","Indiana","","indiana","U89435271","000000024931","123456","indiana@usf.edu","1899-07-01","Archaeology","Arts & Sciences","Faculty","Faculty"],
+                    ["1028372","Jones","Indiana","","indiana","U89435271","000000024931","123456","indiana@usf.edu","1899-07-01","Archaeology","Arts & Sciences","Faculty","Faculty"],
+                    ["1028373","Jones","Indiana","","indiana","U89435271","000000024931","123456","indiana@usf.edu","1899-07-01","Archaeology","Arts & Sciences","Faculty","Faculty"],
+                    ["1028374","Jones","Indiana","","indiana","U89435271","000000024931","123456","indiana@usf.edu","1899-07-01","Archaeology","Arts & Sciences","Faculty","Faculty"],
+                    ["1028375","Jones","Indiana","","indiana","U89435271","000000024931","123456","indiana@usf.edu","1899-07-01","Archaeology","Arts & Sciences","Faculty","Faculty"],
+                    ["1028376","Jones","Indiana","","indiana","U89435271","000000024931","123456","indiana@usf.edu","1899-07-01","Archaeology","Arts & Sciences","Faculty","Faculty"],
+                    ["1028377","Jones","Indiana","","indiana","U89435271","000000024931","123456","indiana@usf.edu","1899-07-01","Archaeology","Arts & Sciences","Faculty","Faculty"],
+                    ["1028378","Jones","Indiana","","indiana","U89435271","000000024931","123456","indiana@usf.edu","1899-07-01","Archaeology","Arts & Sciences","Faculty","Faculty"],
+                    ["1028379","Jones","Indiana","","indiana","U89435271","000000024931","123456","indiana@usf.edu","1899-07-01","Archaeology","Arts & Sciences","Faculty","Faculty"]
+                ],
+                "aoColumns": [
+                    { "sTitle": "NAMS Badge", "bVisible": false },
+                    { "sTitle": "Last Name" },
+                    { "sTitle": "First Name" },
+                    { "sTitle": "Middle Name" },
+                    { "sTitle": "Netid" },
+                    { "sTitle": "USFid", "bVisible": false },
+                    { "sTitle": "EmplID", "bVisible": false },
+                    { "sTitle": "PIDM", "bVisible": false },
+                    { "sTitle": "Email" },
+                    { "sTitle": "BirthDate", "bVisible": false },
+                    { "sTitle": "Department", "bVisible": false },
+                    { "sTitle": "College" },
+                    { "sTitle": "EPPA" },
+                    { "sTitle": "USF PA" }
+                ]
+            } ); 
+            $('#results-data-table tbody tr').click( function () {
+              var aData = oTable.fnGetData( this );
+              alert( aData[0] ); // assuming the id is in the first column
+            } );   
+      } );
+    </script>
+</body>
+</html>

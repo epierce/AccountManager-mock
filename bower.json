@@ -8,8 +8,7 @@
     "bootstrap":"~3.0.0",
     "angular-ui-bootstrap-bower":"~0.5.0",
     "angular":"~1.0.7",
-    "datatables":"~1.9.4",
-    "datatables-plugins": "dec9bace32"
+    "datatables":"~1.9.4"
   },
   "devDependencies": {
   }

@@ -3,6 +3,8 @@ body { padding-top: 70px; }
 #BioDemAccordian .dl-horizontal dt { width: 100px;}
 #BioDemAccordian .dl-horizontal dd { margin-left: 115px;}
 
+#main-search-group {  padding-top: 100px; }
+
 .btn-xsmall {
   padding: 3px 5px;
   font-size: 12px;
@@ -39,9 +41,21 @@ table {
     clear: both;
 }
 
+table.dataTable tr.odd {background-color: rgb(245, 245, 245);}
 table.dataTable tr.odd td.sorting_1 { background-color: #F0F5F8; }
 table.dataTable tr.odd td.sorting_2 { background-color: #DADCFF; }
 table.dataTable tr.odd td.sorting_3 { background-color: #E0E2FF; }
 table.dataTable tr.even td.sorting_1 { background-color: #FCFCFC; }
 table.dataTable tr.even td.sorting_2 { background-color: #F2F3FF; }
 table.dataTable tr.even td.sorting_3 { background-color: #F9F9FF; }
+
+#result-data tbody tr.even:hover, #result-data tbody tr.even td.highlighted { background-color: #DCE8EE; }
+#result-data tbody tr.odd:hover, #result-data tbody tr.odd td.highlighted { background-color: #DCE8EE; }
+#result-data tr.even:hover { background-color: #ECFFB3; }
+#result-data tr.even:hover td.sorting_1 { background-color: #B9D1DF; }
+#result-data tr.even:hover td.sorting_2 { background-color: #D1DFB9; }
+#result-data tr.even:hover td.sorting_3 { background-color: #DFB9D1; }
+#result-data tr.odd:hover { background-color: #DCE8EE; }
+#result-data tr.odd:hover td.sorting_1 { background-color: #B9D1DF; }
+#result-data tr.odd:hover td.sorting_2 { background-color: #D1DFB9; }
+#result-data tr.odd:hover td.sorting_3 { background-color: #DFB9D1; }
