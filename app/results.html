@@ -53,7 +53,7 @@
         <ul class="breadcrumb">
           <li><a href="index.html">Home</a></li>
           <li><a href="search.html">Search</a></li>
-          <li class="active">Results for <b>fn:indiana</b></li>
+          <li class="active">Results for <b>fn:henry ln:jones</b></li>
         </ul>
         
         <div class="row">
@@ -78,13 +78,11 @@
     
     <script>
       $(document).ready(function() {
-            $.extend( $.fn.dataTableExt.oStdClasses, {
-              "sWrapper": "dataTables_wrapper form-inline"
-            } );
+            $.extend( $.fn.dataTableExt.oStdClasses, { "sWrapper": "dataTables_wrapper form-inline" } );
             
             $('#results-data-table').html( '<table cellpadding="0" cellspacing="0" border="0" class="table" id="result-data"></table>' );
             var oTable = $('#result-data').dataTable( {
-                "sDom": "<'row'<'col-lg-12'C>><'<'row'<'col-lg-4'l><'col-lg-6-offset-2'f>r>t<'row'<'col-lg-4'i><'col-lg-4'p>>",
+                "sDom": "<'row'<'col-lg-12'C>><'<'row'<'col-lg-4'l><'col-lg-6-offset-2'f>r>t<'row'<'col-lg-6'i><'col-lg-6'p>>",
                 "oColVis": {
                   "sSize": "css"
                 },
@@ -93,22 +91,19 @@
                 },
                 "sPaginationType": "bootstrap",
                 "aaData": [
-                    ["1028370","Jones","Indiana","","indiana","U89435271","000000024931","123456","indiana@usf.edu","1899-07-01","Archaeology","Arts & Sciences","Faculty","Faculty"],
-                    ["1028371","Jones","Indiana","","indiana","U89435271","000000024931","123456","indiana@usf.edu","1899-07-01","Archaeology","Arts & Sciences","Faculty","Faculty"],
-                    ["1028372","Jones","Indiana","","indiana","U89435271","000000024931","123456","indiana@usf.edu","1899-07-01","Archaeology","Arts & Sciences","Faculty","Faculty"],
-                    ["1028373","Jones","Indiana","","indiana","U89435271","000000024931","123456","indiana@usf.edu","1899-07-01","Archaeology","Arts & Sciences","Faculty","Faculty"],
-                    ["1028374","Jones","Indiana","","indiana","U89435271","000000024931","123456","indiana@usf.edu","1899-07-01","Archaeology","Arts & Sciences","Faculty","Faculty"],
-                    ["1028375","Jones","Indiana","","indiana","U89435271","000000024931","123456","indiana@usf.edu","1899-07-01","Archaeology","Arts & Sciences","Faculty","Faculty"],
-                    ["1028376","Jones","Indiana","","indiana","U89435271","000000024931","123456","indiana@usf.edu","1899-07-01","Archaeology","Arts & Sciences","Faculty","Faculty"],
-                    ["1028377","Jones","Indiana","","indiana","U89435271","000000024931","123456","indiana@usf.edu","1899-07-01","Archaeology","Arts & Sciences","Faculty","Faculty"],
-                    ["1028378","Jones","Indiana","","indiana","U89435271","000000024931","123456","indiana@usf.edu","1899-07-01","Archaeology","Arts & Sciences","Faculty","Faculty"],
-                    ["1028379","Jones","Indiana","","indiana","U89435271","000000024931","123456","indiana@usf.edu","1899-07-01","Archaeology","Arts & Sciences","Faculty","Faculty"]
+                    ["1028370","Jones, Indiana","Jones","Indiana","Henry","Jones","","Jr","indiana","U89435271","000000024931","123456","indiana@usf.edu","1899-07-01","Archaeology","Arts & Sciences","Faculty","Faculty"],
+                    ["1028371","Williams, Mutt","Williams","Mutt","Henry","Jones","E","III","","U89934571","","654321","","1920-02-03","","","","Applicant"],
+                    ["1028372","Jones, Henry","Jones","Henry","Henry","Jones","T","Sr","hjones","U81456388","000000014631","114520","hjones@usf.edu","1872-04-11","Religious Studies","Arts & Sciences","Faculty","Prof Emeritus"]
                 ],
                 "aoColumns": [
                     { "sTitle": "NAMS Badge", "bVisible": false },
-                    { "sTitle": "Last Name" },
-                    { "sTitle": "First Name" },
-                    { "sTitle": "Middle Name" },
+                    { "sTitle": "Display Name"},
+                    { "sTitle": "Custom Last Name", "bVisible": false },
+                    { "sTitle": "Custom First Name", "bVisible": false },
+                    { "sTitle": "Off. First Name"},
+                    { "sTitle": "Off. Last Name"},
+                    { "sTitle": "Off. Middle Name" },
+                    { "sTitle": "Generation", "bVisible": false },
                     { "sTitle": "Netid" },
                     { "sTitle": "USFid", "bVisible": false },
                     { "sTitle": "EmplID", "bVisible": false },
@@ -123,7 +118,7 @@
             } ); 
             $('#results-data-table tbody tr').click( function () {
               var aData = oTable.fnGetData( this );
-              alert( aData[0] ); // assuming the id is in the first column
+              window.location.assign(aData[0]+".html");
             } );   
       } );
     </script>

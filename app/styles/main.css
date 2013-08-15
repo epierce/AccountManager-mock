@@ -1,9 +1,14 @@
 body { padding-top: 70px; }
 
-#BioDemAccordian .dl-horizontal dt { width: 100px;}
+#BioDemAccordian dt { border-bottom: 1px solid #EEE;}
 #BioDemAccordian .dl-horizontal dd { margin-left: 115px;}
 
 #main-search-group {  padding-top: 100px; }
+
+#user-photo-modal .modal-dialog { width: 270px;}
+#user-photo-modal .modal-dialog .modal-content .modal-body img { placement}
+
+.biodem-attrib-title { margin-bottom: 0px;}
 
 .btn-xsmall {
   padding: 3px 5px;
@@ -41,7 +46,8 @@ table {
     clear: both;
 }
 
-table.dataTable tr.odd {background-color: rgb(245, 245, 245);}
+table.dataTable tr.odd {background-color: #FFFFFF;}
+table.dataTable tr.even {background-color: #FFFFFF;}
 table.dataTable tr.odd td.sorting_1 { background-color: #F0F5F8; }
 table.dataTable tr.odd td.sorting_2 { background-color: #DADCFF; }
 table.dataTable tr.odd td.sorting_3 { background-color: #E0E2FF; }
@@ -49,6 +55,7 @@ table.dataTable tr.even td.sorting_1 { background-color: #FCFCFC; }
 table.dataTable tr.even td.sorting_2 { background-color: #F2F3FF; }
 table.dataTable tr.even td.sorting_3 { background-color: #F9F9FF; }
 
+#result-data tbody tr:hover {cursor:pointer;}
 #result-data tbody tr.even:hover, #result-data tbody tr.even td.highlighted { background-color: #DCE8EE; }
 #result-data tbody tr.odd:hover, #result-data tbody tr.odd td.highlighted { background-color: #DCE8EE; }
 #result-data tr.even:hover { background-color: #ECFFB3; }
