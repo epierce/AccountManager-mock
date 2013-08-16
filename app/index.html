@@ -1,0 +1,121 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="bower_components/datatables/media/css/jquery.dataTables.css">
+        
+        <!-- build:css({.tmp,app}) styles/main.css -->
+        <link rel="stylesheet" href="styles/ColVis.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+  </head>
+  <body ng-app="accountManMockApp">
+    <!--[if lt IE 7]>
+      <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+      <script src="bower_components/es5-shim/es5-shim.js"></script>
+      <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+    <div class="container">
+      <div class="navbar navbar-fixed-top">
+        <!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <a class="navbar-brand" href="index.html">AccountManager</a>
+      </div>
+        
+      <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+          <div class="input-group" id="main-search-group">
+            <input type="text" class="form-control" value="fn:henry ln:jones">
+            <span class="input-group-btn">
+              <a href="results.html" class="btn btn-primary">Search</a>
+            </span>
+          </div><!-- /input-group -->
+          
+          <p style="padding-top: 30px;">
+            <div class="panel-group" id="accordion">
+              <div class="panel">
+                <div class="panel-heading">
+                  <h3 class="panel-title">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                      Search Examples
+                    </a>
+                  </h3>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    Some identifiers can be entered directly
+                    <dl class="dl-horizontal">
+                      <dt>USF ID</dt><dd>U123456789</dd>
+                      <dt>Employee ID</dt><dd>00000123456 <small>(leading zeros required)</small></dd>
+                      <dt>Email address</dt><dd>mmock@usf.edu</dd>
+                      <dt>ID Card number</dt><dd>6400130001234567</dd>
+                      <dt>Library patron number</dt> <dd>20500012345671</dd>
+                    </dl>
+
+                    Other identifiers require "type hinting"
+                    <dl class="dl-horizontal">
+                      <dt>First name</dt><dd>fn:molly</dd>
+                      <dt>Middle name</dt><dd>mn:margaret</dd>
+                      <dt>Middle initial</dt><dd>mi:m</dd>
+                      <dt>Last name</dt><dd>ln:mock</dd>
+                      <dt>NetID</dt><dd>netid:mmock</dd>
+                      <dt>NAMS badge</dt><dd>badge:1028370</dd>
+                      <dt>Employee ID</dt><dd>emplid:123456</dd>
+                      <dt>Employee ID</dt><dd>emplid:123456</dd>
+                      <dt>ID Card number</dt><dd>card:1234567</dd>
+                      <dt>EduPerson Affiliation</dt><dd>eppa:faculty</dd>
+                      <dt>USF Affiliation</dt><dd>usfpa:"retired faculty"</dd>
+                      <dt>Department</dt><dd>dept:"information technology"</dd>
+                      <dt>College</dt><dd>col:engineering</dd>
+                      <dt>Campus</dt><dd>loc:stpete</dd>
+                    </dl>
+
+                    Identifiers can be combined for more complex queries
+                    <dl class="dl-horizontal">
+                      <dt>full name</dt><dd>lname:mock fname:molly</dd>
+                      <dt>last name and ePPA</dt><dd>lname:mock eppa:faculty</dd>
+                    </dl>
+                  </div>
+                </div>
+              </div>              
+          </p>
+        </div>
+        <div class="col-lg-3"></div>
+      </div>
+        <hr>    
+
+        <footer>      </footer>
+      </div> <!-- /container -->  
+    </div>
+
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/datatables/media/js/jquery.dataTables.js"></script>
+    <script src="bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+    
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/ColVis.js"></script>
+    <!-- endbuild -->
+    
+</body>
+</html>
