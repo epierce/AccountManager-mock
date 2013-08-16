@@ -1,0 +1,862 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="bower_components/datatables/media/css/jquery.dataTables.css">
+  
+        <!-- build:css({.tmp,app}) styles/main.css -->
+        <link rel="stylesheet" href="styles/ColVis.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+  </head>
+  <body ng-app="accountManMockApp">
+    <!--[if lt IE 7]>
+      <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+      <script src="bower_components/es5-shim/es5-shim.js"></script>
+      <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+<div class="container">
+
+  <div class="navbar navbar-fixed-top">
+    <!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    <a class="navbar-brand" href="#">Account Manager</a>
+    <div class="nav-collapse collapse navbar-responsive-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="#affiliations">Affiliations</a></li>
+        <li><a href="#accounts">Accounts</a></li>
+      </ul>
+      <form class="navbar-form pull-right">
+        <input type="text" class="form-control" style="width: 200px;">
+        <button type="submit" class="btn btn-default">Search</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="container">
+    <ul class="breadcrumb">
+      <li><a href="index.html">Search</a></li>
+      <li><a href="results.html">Results</a></li>
+      <li class="active">badge:1028372</li>
+    </ul>
+    <div class="row">
+      <div class="col-lg-12">
+        <h2 style="padding: 0px; margin-bottom: 0px;">Jones, Henry</h2>
+        <hr style="padding: 0px; margin-top: 0px;">
+      </div>
+    </div>
+    <div class="alert alert-danger">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <strong>Alert!</strong> This user's NetID is <strong>locked</strong>.
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="row">
+          <!-- Photo Box -->
+          <div class="col-lg-12">
+          <a data-toggle="modal" href="#user-photo-modal" id="user-photo-link">
+            <img class="pull-left" style="padding-right: 5px;" src="images/1028372.jpg" height="75" alt="User picture" id="user-picture" >
+          </a>
+            <h2 style="margin-top: 5px;"><small>NetID</small> 
+              <small>
+                <a style="text-decoration: none;" href="#" data-toggle="tooltip" title="The GoogleApps Account is locked" id="GAtooltip" placement="top">
+                  <i class="icon-cloud text-danger"></i>
+                </a>
+              </small>
+              <small>
+                <a href="#" style="text-decoration: none;" data-toggle="tooltip" title="Wireless (USF-GOLD) Access Not Allowed (Locked)" placement="top" id="WiFitooltip">
+                    <i class="icon-signal text-danger"></i>
+                </a>
+              </small>
+              <small>
+                <a href="#" style="text-decoration: none;" data-toggle="tooltip" title="VPN Access Not Allowed (Locked)" placement="top" id="VPNtooltip">
+                  <i class="icon-sitemap text-danger"></i>
+                </a>
+              </small>
+              <br>hjones
+            </h2>
+          </div>
+        </div>
+        <!-- Button Group -->
+        <div class="row" style="padding-bottom: 20px;">
+          <div class="col-lg-12">
+            <div class="btn-group btn-group-justified hidden-sm">
+              <a href="#" class="btn btn-primary btn-small" style="border-right: 1px solid #CEECF5;">Reset Secret Question</a>
+              <a href="#" class="btn btn-danger btn-small">Unlock NetID</a>
+              <a href="#" class="btn btn-primary btn-small disabled" style="border-left: 1px solid #CEECF5;">Remove VPN Access</a>
+            </div>
+            <div class="btn-group-vertical visible-sm">
+              <a href="#" class="btn btn-primary btn-small">Reset Secret Question</a>
+              <a href="#" class="btn btn-danger btn-small" style="border-top: 1px solid #CEECF5;">Unlock NetID</a>
+              <a href="#" class="btn btn-primary btn-small disabled" style="border-top: 1px solid #CEECF5;">Remove VPN Access</a>
+            </div>
+          </div>
+        </div>
+        <!-- Basic Info Accordion -->
+        <div class="accordion" id="basic-info-accordion">
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#basic-info-accordion" href="#basic-info-accordion-data">
+                Basic Information
+              </a>
+            </div>
+            <div id="basic-info-accordion-data" class="accordion-body collapse in">
+              <div id="BioDemAccordian" class="accordion-inner">
+                <div class="row">
+                  <div class="col-lg-7">
+                    <dl>
+                      <dt>
+                        <h4 class="biodem-attrib-title">
+                          Primary Email
+                          <a data-toggle="modal" href="#email-edit-modal">
+                            <i class="icon-pencil pull-right"></i>
+                          </a>
+                        </h4>
+                      </dt><dd>hjones@usf.edu</dd>
+                      <dt>
+                        <h4 class="biodem-attrib-title">
+                          First Name
+                          <a data-toggle="modal" href="#name-edit-modal">
+                            <i class="icon-pencil pull-right"></i>
+                          </a>
+                        </h4>
+                      </dt>Henry</dd>
+                      <dt>
+                        <h4 class="biodem-attrib-title">
+                          Middle Name
+                          <a data-toggle="modal" href="#name-edit-modal">
+                            <i class="icon-pencil pull-right"></i>
+                          </a>
+                        </h4>
+                      </dt><dd>Theodore</dd>
+                      <dt>
+                        <h4 class="biodem-attrib-title">
+                          Last Name
+                          <a data-toggle="modal" href="#name-edit-modal">
+                            <i class="icon-pencil pull-right"></i>
+                          </a>
+                        </h4>
+                      </dt><dd>Jones</dd>
+                      <dt>
+                        <h4 class="biodem-attrib-title">
+                          Generation Qualifier
+                        </h4>
+                      </dt><dd>Sr</dd>
+                    </dl>
+                  </div>
+
+                  <div class="col-lg-5">
+                    <dl>
+                      <dt><h4 class="biodem-attrib-title">Date of Birth</dt><dd>1872-04-11</dd>
+                      <dt><h4 class="biodem-attrib-title">NAMS Badge</dt><dd>1028372</dd>
+                      <dt><h4 class="biodem-attrib-title">Unumber</dt><dd>U81456388</dd>
+                      <dt><h4 class="biodem-attrib-title">EmplID</dt><dd>000000014631</dd>
+                      <dt><h4 class="biodem-attrib-title">Banner PIDM</dt><dd>114520</dd>
+                    </dl>
+                  
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Alternate NetIDs -->
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionAltNetIDs" href="#collapseAltNetIDs">
+                Alternate NetIDs <span class="label label-info pull-right">0</span>
+              </a>
+            </div>
+            <div id="collapseAltNetIDs" class="accordion-body collapse">
+              <div class="accordion-inner">
+                <table class="table table-condensed">
+                  <thead>
+                    <tr>
+                      <th>NetID</th>
+                      <th>Admin</th>
+                      <th>Date</th>
+                      <th style="width: 20px;"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p><button class="btn btn-success btn-block" type="button">Change NetID</button></p>              
+              </div>
+            </div>
+          </div>
+          <!-- ID Card Numbers -->
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#id-card-accordion" href="#id-card-accordion-data">
+                ID Cards <span class="label label-info pull-right">1</span>
+              </a>
+            </div>
+            <div id="id-card-accordion-data" class="accordion-body collapse">
+              <div class="accordion-inner">
+                <table class="table table-condensed">
+                  <thead>
+                    <tr>
+                      <th>Card #</th>
+                      <th>Type</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>4392311</td>
+                      <td>Professor Emeritus</td>
+                      <td>Active</td>
+                    </tr>
+                  </tbody>
+                </table>              
+              </div>
+            </div>
+          </div>
+          <!-- Entitlements -->
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#entitlement-accordion" href="#entitlement-accordion-data">
+                Entitlements <span class="label label-info pull-right">0</span>
+              </a>
+            </div>
+            <div id="entitlement-accordion-data" class="accordion-body collapse">
+              <div class="accordion-inner">
+                <table class="table table-condensed">
+                  <thead>
+                    <tr>
+                      <th>Entitlement</th>
+                      <th>Admin</th>
+                      <th>Date</th>
+                      <th style="width: 20px;"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>      
+                  </tbody>
+                </table>
+                <p><button class="btn btn-success btn-block" type="button">Add Entitlement</button></p>              
+              </div>
+            </div>
+          </div>
+          <!-- VIP Groups -->
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#group-accordion" href="#group-accordion-data">
+                Groups <span class="label label-info pull-right">0</span>
+              </a>
+            </div>
+            <div id="group-accordion-data" class="accordion-body collapse">
+              <div class="accordion-inner">
+                <table class="table table-condensed">
+                  <thead>
+                    <tr>
+                      <th>Group Name</th>
+                      <th>Function</th>
+                      <th>Sponsor</th>
+                      <th>Added</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Professor Emeritus</td>
+                      <td>member</td>
+                      <td>mbrody</td>
+                      <td>2012-02-10</td>
+                    </tr>
+                  </tbody>
+                </table> 
+                <p><button class="btn btn-success btn-block" type="button">Open Group Manager</button></p>             
+              </div>
+            </div>
+          </div> 
+          <!-- AD Attributes -->
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#ad-attrib-accordion" href="#ad-attrib-accordion-data">
+                AD Attributes
+              </a>
+            </div>
+            <div id="ad-attrib-accordion-data" class="accordion-body collapse">
+              <div class="accordion-inner">
+                <table class="table" id="ad-attrib-table">
+                  <thead>
+                    <tr>
+                      <th>Attribute</th>
+                      <th>Value</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>objectclass</td>
+                      <td>top <br>person <br>organizationalPerson <br>user <br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>cn</td>
+                      <td>Jones, Henry [hjones]
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>sn</td>
+                      <td>Jones
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>title</td>
+                      <td>Professor Emeritus
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>physicaldeliveryofficename</td>
+                      <td>LIB618
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>telephonenumber</td>
+                      <td>813-123-4567
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>givenname</td>
+                      <td>Henry
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>distinguishedname</td>
+                      <td>CN=Jones\, Henry [hjones],OU=Archaeology,OU=Colleges and Departments,DC=forest,DC=usf,DC=edu
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>whencreated</td>
+                      <td>20090217223617.0Z
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>whenchanged</td>
+                      <td>20130814180520.0Z
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>displayname</td>
+                      <td>Jones, Henry
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>memberof</td>
+                      <td>CN=IT MSSQL Database Contacts,OU=Distribution Groups,DC=forest,DC=usf,DC=edu <br>CN=IT-Splunk Admins,OU=Security Groups,DC=forest,DC=usf,DC=edu <br>CN=IT OPS Staff Mailbox Group,OU=Distribution Groups,DC=forest,DC=usf,DC=edu <br>CN=WWW System IT Management,OU=WWW,OU=Groups,OU=Admin,DC=fastmail,DC=usf,DC=edu <br>CN=IT-Forest Contacts,OU=Security Groups,DC=forest,DC=usf,DC=edu <br>CN=CIMS.T.NULL.Staff,OU=Role,OU=Groups,OU=Students,DC=forest,DC=usf,DC=edu <br>CN=AA URO DegreeWorks User Group DL,OU=Distribution Groups,DC=forest,DC=usf,DC=edu <br>CN=CIMS.T.Staff,OU=Role,OU=Groups,OU=Students,DC=forest,DC=usf,DC=edu <br>CN=O-IT-SEC-IdMPO,OU=O Drive Groups,OU=Security Groups,DC=forest,DC=usf,DC=edu <br>CN=CIMS.NULL.Staff,OU=Role,OU=Groups,OU=Students,DC=forest,DC=usf,DC=edu <br>CN=CIMS.T.NULL.2754.Staff,OU=Role,OU=Groups,OU=Students,DC=forest,DC=usf,DC=edu <br>CN=Domain Users,CN=Users,DC=forest,DC=usf,DC=edu <br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>department</td>
+                      <td>Archaeology
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>company</td>
+                      <td>Arts & Sciences
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>proxyaddresses</td>
+                      <td>X500:/o=USF/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Recipients/cn=hjones <br>x500:/o=ExchangeLabs/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Recipients/cn=ec37c2c0a84a42fbb6d483a4461fe71b-Jones, Indiana <br>SMTP:indiana@usf.edu <br>smtp:hjones@usfedu.mail.onmicrosoft.com <br>X400:C=US;A= ;P=USF;O=ADMIN;S=Jones;G=Henry; <br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>targetaddress</td>
+                      <td>SMTP:indiana@usfedu.mail.onmicrosoft.com
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>extensionattribute1</td>
+                      <td>1028372
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>mailnickname</td>
+                      <td>hjone
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>extensionattribute11</td>
+                      <td>000000242117
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>useraccountcontrol</td>
+                      <td>512
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>badpwdcount</td>
+                      <td>0
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>employeeid</td>
+                      <td>000000242117
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>homedirectory</td>
+                      <td>\\forest.usf.edu\data\udrive\hjones
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>homedrive</td>
+                      <td>U:
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>badpasswordtime</td>
+                      <td>130209572021859310
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>lastlogon</td>
+                      <td>130210819437455509
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>pwdlastset</td>
+                      <td>130163147656929298
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>accountexpires</td>
+                      <td>9223372036854775807
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>logoncount</td>
+                      <td>162
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>samaccountname</td>
+                      <td>indiana
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>userprincipalname</td>
+                      <td>indiana@usf.edu
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>lockouttime</td>
+                      <td>0
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>lastlogontimestamp</td>
+                      <td>130204727030734393
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>mail</td>
+                      <td>indiana@usf.edu
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>uidnumber</td>
+                      <td>1028370
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>gidnumber</td>
+                      <td>10001
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>unixhomedirectory</td>
+                      <td>/home/i/indiana
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>loginshell</td>
+                      <td>/bin/bash
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>msexchuseraccountcontrol</td>
+                      <td>0
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>usfeduunumber</td>
+                      <td>U89435271
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>edupersonprimaryaffiliation</td>
+                      <td>Faculty
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>usfedunamsid</td>
+                      <td>1028370
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>edupersonentitlement</td>
+                      <td>usf:it:accounts:exchange <br>usf:it:accounts:peoplesoftss <br>usf:it:accounts:peoplesoftfm <br>usf:it:accounts:activedirectory <br>usf:it:accounts:gmail <br>usf:it:accounts:unix <br>usf:it:accounts:netid <br>usf:tampa:no_college:information_technology:staff <br>usf:tampa:no_college:information_technology <br>usf:tampa:no_college:staff <br>usf:information_technology:staff <br>usf:no_college:staff <br>usf:no_college:information_technology <br>usf:tampa:staff <br>usf:tampa:information_technology <br>usf:tampa:no_college <br>usf:staff <br>usf:information_technology <br>usf:no_college <br>usf:tampa <br>itMessageserviceUser <br>itNetworkWirelessreporter <br>itJiraUser <br>itNams_wsAdlookup <br>itNams_wsVip <br>itNamsSupersponsor <br>itNamsSponsor <br>itVipUser <br>itWs-activatenetidUser <br>itWs-identityUser <br>itNams_wsConvert <br>itNamsLdap <br>itPrSupervisor <br>itActivedirGroupmanager <br>itNams_wsValidstaff <br>itNams_wsUpdatehosts <br>itZendAdmin <br>itNamsProvisioner <br>itNamsSuper <br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>msexchwhenmailboxcreated</td>
+                      <td>20121114040137.0Z
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>usfeduprimarydepartment</td>
+                      <td>Archaeology
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>usfedudepartment</td>
+                      <td>Archaeology
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>usfeduaffiliation</td>
+                      <td>Faculty : Archaeology
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>edupersonaffiliation</td>
+                      <td>member <br>faculty <br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>usfeduprimaryaffiliation</td>
+                      <td>Faculty
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>usfeducampus</td>
+                      <td>Tampa
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>usfedunetid</td>
+                      <td>indiana <br>henryjones <br>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table> 
+              </div>
+            </div>
+          </div>                                  
+        </div>
+      </div>
+      <!-- Begin Right Column -->
+      <div class="col-lg-6">
+        <div class="row">
+          <h2 id="affiliations" class="pull-left"></h2>
+          
+          <ul class="list-inline pull-right">
+            <li><h3 style="margin-top: 10px;"><small>eduPersonPrimaryAffiliation</small><br>Faculty</h4></li>
+            <li><h3 style="margin-top: 10px;"><small>usfEduPrimaryAffiliation</small><br>Professor Emeritus</h4></li>
+          </ul>
+        </div>
+          <table cellpadding="0" cellspacing="0" border="0" class="table" id="AffiliationsTable">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Start</th>
+                <th>End</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><h4>Professor Emeritus</h4></td>
+                <td><h5>2012-02-10</h5></td>
+                <td><h5>Present</h5></td>
+              </tr>
+              <tr class="active">
+                <td class="text-muted"><h5>Faculty<br><small>Archaeology</small></h5></td>
+                <td class="text-muted">2000-11-04</td>
+                <td class="text-muted">2012-02-09</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+  </div>
+  <!-- Notes -->
+  <div class="row">
+    <div class="col-lg-12">  
+      <div class="accordion" id="accordion2-notes">
+        <div class="accordion-group">
+          <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2-notes" href="#collapseOne-notes">
+              <h4 id="notes">Notes<span class="label label-info pull-right">6</span></h4>
+            </a>
+          </div>
+          <div id="collapseOne-notes" class="accordion-body collapse">
+            <div class="accordion-inner">
+              <table cellpadding="0" cellspacing="0" border="0" class="table" id="NotesTable">
+                <thead>
+                  <tr>
+                    <th>Created</th>
+                    <th>Note Type</th>
+                    <th>Creator</th>
+                    <th>Note</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2013-07-09 12:52:10</td>
+                    <td><b>Account</b>: netid.usf.edu - NetID - it-collegenet</td>
+                    <td>epierce</td>
+                    <td>Service Account created with update_ldap: Account for CollegeNet testing of Shibboleth connection to 25Live</td>
+                  </tr>
+                  <tr>
+                    <td>2013-07-09 12:52:10</td>
+                    <td><b>Account</b>: usf.edu - ActiveDirectory - it-collegenet</td>
+                    <td>epierce</td>
+                    <td>Service Account created with update_ldap: Account for CollegeNet testing of Shibboleth connection to 25Live</td>
+                  </tr>
+                  <tr>
+                    <td>2013-04-03 14:19:31</td>
+                    <td><b>Account</b>: netid.usf.edu - NetID - provision</td>
+                    <td>epierce</td>
+                    <td>Service Account created with update_ldap: CIMS Active Directory provisioning account</td>
+                  </tr>
+                  <tr>
+                    <td>2013-04-03 14:19:31</td>
+                    <td><b>Account</b></td>
+                    <td>epierce</td>
+                    <td>Service Account created with update_ldap: CIMS Active Directory provisioning account</td>
+                  </tr>
+                  <tr>
+                    <td>2013-03-28 11:14:58</td>
+                    <td><b>Account</b>: netid.usf.edu - NetID - it-sn-discovery</td>
+                    <td>epierce</td>
+                    <td>Service Account created with update_ldap: This account is used for Service Now Discovery</td>
+                  </tr>
+                  <tr>
+                    <td>2013-03-28 11:14:58</td>
+                    <td><b>Account</b>: usf.edu - ActiveDirectory - it-sn-discovery</td>
+                    <td>epierce</td>
+                    <td>Service Account created with update_ldap: This account is used for Service Now Discovery</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="row">
+                <div class="col-lg-4 col-offset-8">                      
+                  <button class="btn btn-success btn-block " type="button">Add Note</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Accounts -->
+  <div class="row">
+    <div class="col-lg-12">  
+      <div class="accordion" id="accounts-accordion">
+        <div class="accordion-group">
+          <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accounts-accordion" href="#accounts-accordion-data">
+              <h4 id="accounts">Accounts<span class="label label-info pull-right">10</span></h4>
+            </a>
+          </div>
+          <div id="accounts-accordion-data" class="accordion-body collapse in">
+            <div class="accordion-inner">
+              <div id="AccountDataTable"></div>
+                <div class="row">
+                  <div class="col-lg-4 col-offset-8">                      
+                    <button class="btn btn-success btn-block " type="button">Add Account</button>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> <!-- /container --> 
+
+<!-- View User Photo -->
+<div class="modal fade" id="user-photo-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        &nbsp;<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img src="images/1028372.jpg" alt="User picture" id="user-picture" >
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal --> 
+
+<!-- Update Primary Email Address -->
+<div class="modal fade" id="email-edit-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Edit Primary Email Address</h4>
+      </div>
+      <div class="modal-body">
+        <p>
+          <label for="PrimaryEmailEdit">Primary email address</label>
+          <select id="PrimaryEmailEdit" class="form-control input-lg">
+            <option selected>hjones@usf.edu</option>
+            <option>hjones@cas.usf.edu</option>
+            <option>hjones@mail.usf.edu</option>
+          </select>
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- Modify Names -->
+<div class="modal fade" id="name-edit-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Edit Display Names</h4>
+      </div>
+      <div class="modal-body">
+        <div class="well">
+          <label for="official-names-well">Official Name Data</label>
+          <div class="row" id="official-names-well">
+            <div class="col-lg-4">
+              <h4>First Name</h4>
+              Henry
+            </div>
+            <div class="col-lg-4">
+              <h4>Middle Name</h4>
+              
+            </div>
+            <div class="col-lg-4">
+              <h4>Last Name</h4>
+              Jones
+            </div>
+          </div>
+        </div> <!-- /well -->
+      </div>
+      <div class="row">
+          <div class="col-8 col-offset-2">
+            <form role="form">
+              <fieldset>
+                <div class="form-group">
+                  <label for="edit-first-name">First Name</label>
+                  <input type="text" class="form-control" id="edit-first-name">
+                </div>
+                <div class="form-group">
+                  <label for="edit-middle-name">Middle Name</label>
+                  <input type="text" class="form-control" id="edit-middle-name">
+                </div>
+                <div class="form-group">
+                  <label for="edit-last-name">Last Name</label>
+                  <input type="text" class="form-control" id="edit-last-name">
+                </div>
+              </fieldset>
+            </form>
+
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/datatables/media/js/jquery.dataTables.js"></script>
+    <script src="bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+    
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/ColVis.js"></script>
+    <!-- endbuild -->
+    
+    <script>
+      $('#GAtooltip').tooltip();
+      $('#VPNtooltip').tooltip();
+      $('#WiFitooltip').tooltip();
+      $(document).ready(function() {
+            $.extend( $.fn.dataTableExt.oStdClasses, {
+              "sWrapper": "dataTables_wrapper form-inline"
+            } );
+            $('#ad-attrib-table').dataTable({"sDom": "<'row'<'col-lg-6'l><'col-lg-6'f>r>t<'row'<'col-lg-6'i><'col-lg-6'p>>"});
+            $('#NotesTable').dataTable({"sDom": "<'row'<'col-lg-6'l><'col-lg-6'f>r>t<'row'<'col-lg-6'i><'col-lg-6'p>>"});
+            $('#AffiliationsTable').dataTable({
+                "sDom": "<'row'<'col-lg-6'l><'col-lg-6'f>r>t<'row'<'col-lg-6'i><'col-lg-6'p>>",
+                "iDisplayLength": 5, 
+                "aaSorting": [[1,'desc'],[2,'asc']],
+                "bFilter": false,
+                "bLengthChange": false,
+                "bSort": false,
+                "bInfo": false,
+                "sPaginationType": "bootstrap"
+            });
+            $('#AccountDataTable').html( '<table cellpadding="0" cellspacing="0" border="0" class="table table-striped" id="example"></table>' );
+            $('#example').dataTable( {
+                "sDom": "<'row'<'col-lg-6'l><'col-lg-6'f>r>t<'row'<'col-lg-6'i><'col-lg-6'p>>",
+                "sPaginationType": "bootstrap",
+                "iDisplayLength": 5,
+                "aLengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]],
+                "oLanguage": {
+                  "sSearch": "Filter:"
+                },
+                "aaData": [
+                    [ "hjones@netid.usf.edu", "NetID", "Locked", '<a href="#myModal"><i class="icon-pencil"></i></a> <a href="#myModal"><i class="icon-remove"></i></a>'],
+                    [ "hjones@usf.edu", "Exchange", "Locked", '<a href="#myModal"><i class="icon-pencil"></i></a> <a href="#myModal"><i class="icon-remove"></i></a>'],
+                    [ "hjones@cas.usf.edu", "Alias", "Active", '<a href="#myModal"><i class="icon-pencil"></i></a> <a href="#myModal"><i class="icon-remove"></i></a>'],
+                    [ "U81456388@FAST-PRO", "PeopleSoftFM", "Locked", '<a href="#myModal"><i class="icon-pencil"></i></a> <a href="#myModal"><i class="icon-remove"></i></a>'],
+                    [ "000000014631@GEMS-PRO", "PeopleSoftSS", "Locked", '<a href="#myModal"><i class="icon-pencil"></i></a> <a href="#myModal"><i class="icon-remove"></i></a>'],
+                    [ "hjones@mail.usf.edu", "Gmail", "Locked", '<a href="#myModal"><i class="icon-pencil"></i></a> <a href="#myModal"><i class="icon-remove"></i></a>']
+                ],
+                "aoColumns": [
+                    { "sTitle": "Account" },
+                    { "sTitle": "Type" },
+                    { "sTitle": "Status" },
+                    { "sTitle": "" }
+                ]
+            } );   
+      } );
+    </script>
+</body>
+</html>
