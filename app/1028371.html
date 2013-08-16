@@ -1,0 +1,549 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="bower_components/datatables/media/css/jquery.dataTables.css">
+  
+        <!-- build:css({.tmp,app}) styles/main.css -->
+        <link rel="stylesheet" href="styles/ColVis.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+  </head>
+  <body ng-app="accountManMockApp">
+    <!--[if lt IE 7]>
+      <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+      <script src="bower_components/es5-shim/es5-shim.js"></script>
+      <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+<div class="container">
+
+  <div class="navbar navbar-fixed-top">
+    <!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    <a class="navbar-brand" href="#">Account Manager</a>
+    <div class="nav-collapse collapse navbar-responsive-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="#affiliations">Affiliations</a></li>
+        <li><a href="#accounts">Accounts</a></li>
+      </ul>
+      <form class="navbar-form pull-right">
+        <input type="text" class="form-control" style="width: 200px;">
+        <button type="submit" class="btn btn-default">Search</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="container">
+    <ul class="breadcrumb">
+      <li><a href="index.html">Search</a></li>
+      <li><a href="results.html">Results</a></li>
+      <li class="active">badge:1028371</li>
+    </ul>
+    <div class="row">
+      <div class="col-lg-12">
+        <h2 style="padding: 0px; margin-bottom: 0px;">Williams, Mutt</h2>
+        <hr style="padding: 0px; margin-top: 0px;">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="row">
+          <!-- Photo Box -->
+          <div class="col-lg-12">
+          <a data-toggle="modal" href="#user-photo-modal" id="user-photo-link">
+            <img class="pull-left" style="padding-right: 5px;" src="images/no_image.jpg" height="75" alt="User picture" id="user-picture" >
+          </a>
+            <h2 style="margin-top: 5px;"><small>NetID</small> 
+              <small>
+                <a style="text-decoration: none;" href="#" data-toggle="tooltip" title="Not eligible for a GoogleApps Account" id="GAtooltip" placement="top">
+                  <i class="icon-cloud text-muted"></i>
+                </a>
+              </small>
+              <small>
+                <a href="#" style="text-decoration: none;" data-toggle="tooltip" title="Wireless (USF-GOLD) access not allowed" placement="top" id="WiFitooltip">
+                    <i class="icon-signal text-muted"></i>
+                </a>
+              </small>
+              <small>
+                <a href="#" style="text-decoration: none;" data-toggle="tooltip" title="VPN access not allowed" placement="top" id="VPNtooltip">
+                  <i class="icon-sitemap text-muted"></i>
+                </a>
+              </small>
+              <br><em>--</em>
+            </h2>
+          </div>
+        </div>
+        <!-- Button Group -->
+        <div class="row" style="padding-bottom: 20px;">
+          <div class="col-lg-12">
+            <div class="btn-group btn-group-justified hidden-sm">
+              <a href="#" class="btn btn-primary btn-small disabled" style="border-right: 1px solid #CEECF5;">Reset Secret Question</a>
+              <a href="#" class="btn btn-primary btn-small disabled">Lock NetID</a>
+              <a href="#" class="btn btn-primary btn-small disabled" style="border-left: 1px solid #CEECF5;">Remove VPN Access</a>
+            </div>
+            <div class="btn-group-vertical visible-sm">
+              <a href="#" class="btn btn-primary btn-small disabled">Reset Secret Question</a>
+              <a href="#" class="btn btn-primary btn-small disabled" style="border-top: 1px solid #CEECF5;">Lock NetID</a>
+              <a href="#" class="btn btn-primary btn-small disabled" style="border-top: 1px solid #CEECF5;">Remove VPN Access</a>
+            </div>
+          </div>
+        </div>
+        <!-- Basic Info Accordion -->
+        <div class="accordion" id="basic-info-accordion">
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#basic-info-accordion" href="#basic-info-accordion-data">
+                Basic Information
+              </a>
+            </div>
+            <div id="basic-info-accordion-data" class="accordion-body collapse in">
+              <div id="BioDemAccordian" class="accordion-inner">
+                <div class="row">
+                  <div class="col-lg-7">
+                    <dl>
+                      <dt>
+                        <h4 class="biodem-attrib-title">
+                          Primary Email
+                          <a data-toggle="modal" href="#email-edit-modal">
+                            <i class="icon-pencil pull-right"></i>
+                          </a>
+                        </h4>
+                      </dt><dd>--</dd>
+                      <dt>
+                        <h4 class="biodem-attrib-title">
+                          First Name
+                          <a data-toggle="modal" href="#name-edit-modal">
+                            <i class="icon-pencil pull-right"></i>
+                          </a>
+                        </h4>
+                      </dt><dd>Mutt<br><small class="text-muted">Henry</small></dd>
+                      <dt>
+                        <h4 class="biodem-attrib-title">
+                          Middle Name
+                          <a data-toggle="modal" href="#name-edit-modal">
+                            <i class="icon-pencil pull-right"></i>
+                          </a>
+                        </h4>
+                      </dt><dd>E</dd>
+                      <dt>
+                        <h4 class="biodem-attrib-title">
+                          Last Name
+                          <a data-toggle="modal" href="#name-edit-modal">
+                            <i class="icon-pencil pull-right"></i>
+                          </a>
+                        </h4>
+                      </dt><dd>Williams<br><small class="text-muted">Jones</small></dd>
+                      <dt>
+                        <h4 class="biodem-attrib-title">
+                          Generation Qualifier
+                        </h4>
+                      </dt><dd>III</dd>
+                    </dl>
+                  </div>
+
+                  <div class="col-lg-5">
+                    <dl>
+                      <dt><h4 class="biodem-attrib-title">Date of Birth</dt><dd>1936-02-03</dd>
+                      <dt><h4 class="biodem-attrib-title">NAMS Badge</dt><dd>1028371</dd>
+                      <dt><h4 class="biodem-attrib-title">Unumber</dt><dd>U89934571</dd>
+                      <dt><h4 class="biodem-attrib-title">EmplID</dt><dd>--</dd>
+                      <dt><h4 class="biodem-attrib-title">Banner PIDM</dt><dd>654321</dd>
+                    </dl>
+                  
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Alternate NetIDs -->
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionAltNetIDs" href="#collapseAltNetIDs">
+                Alternate NetIDs <span class="label label-info pull-right">0</span>
+              </a>
+            </div>
+            <div id="collapseAltNetIDs" class="accordion-body collapse">
+              <div class="accordion-inner">
+                <table class="table table-condensed">
+                  <thead>
+                    <tr>
+                      <th>NetID</th>
+                      <th>Admin</th>
+                      <th>Date</th>
+                      <th style="width: 20px;"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p><button class="btn btn-success btn-block" type="button">Change NetID</button></p>              
+              </div>
+            </div>
+          </div>
+          <!-- ID Card Numbers -->
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#id-card-accordion" href="#id-card-accordion-data">
+                ID Cards <span class="label label-info pull-right">0</span>
+              </a>
+            </div>
+            <div id="id-card-accordion-data" class="accordion-body collapse">
+              <div class="accordion-inner">
+                <table class="table table-condensed">
+                  <thead>
+                    <tr>
+                      <th>Card #</th>
+                      <th>Type</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                  </tbody>
+                </table>              
+              </div>
+            </div>
+          </div>
+          <!-- Entitlements -->
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#entitlement-accordion" href="#entitlement-accordion-data">
+                Entitlements <span class="label label-info pull-right">0</span>
+              </a>
+            </div>
+            <div id="entitlement-accordion-data" class="accordion-body collapse">
+              <div class="accordion-inner">
+                <table class="table table-condensed">
+                  <thead>
+                    <tr>
+                      <th>Entitlement</th>
+                      <th>Admin</th>
+                      <th>Date</th>
+                      <th style="width: 20px;"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>      
+                  </tbody>
+                </table>
+                <p><button class="btn btn-success btn-block" type="button">Add Entitlement</button></p>              
+              </div>
+            </div>
+          </div>
+          <!-- VIP Groups -->
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#group-accordion" href="#group-accordion-data">
+                Groups <span class="label label-info pull-right">0</span>
+              </a>
+            </div>
+            <div id="group-accordion-data" class="accordion-body collapse">
+              <div class="accordion-inner">
+                <table class="table table-condensed">
+                  <thead>
+                    <tr>
+                      <th>Group Name</th>
+                      <th>Function</th>
+                      <th>Sponsor</th>
+                      <th>Added</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="warning">
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                  </tbody>
+                </table> 
+                <p><button class="btn btn-success btn-block" type="button">Open Group Manager</button></p>             
+              </div>
+            </div>
+          </div> 
+          <!-- AD Attributes -->
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#ad-attrib-accordion" href="#ad-attrib-accordion-data">
+                AD Attributes
+              </a>
+            </div>
+            <div id="ad-attrib-accordion-data" class="accordion-body collapse">
+              <div class="accordion-inner">
+                <h4>No Active Directory Account in forest.usf.edu found!</h4>
+              </div>
+            </div>
+          </div>                                  
+        </div>
+      </div>
+      <!-- Begin Right Column -->
+      <div class="col-lg-6">
+        <div class="row">
+          <h2 id="affiliations" class="pull-left"></h2>
+          
+          <ul class="list-inline pull-right">
+            <li><h3 style="margin-top: 10px;"><small>eduPersonPrimaryAffiliation</small><br>--</h4></li>
+            <li><h3 style="margin-top: 10px;"><small>usfEduPrimaryAffiliation</small><br>Student Applicant</h4></li>
+          </ul>
+        </div>
+          <table cellpadding="0" cellspacing="0" border="0" class="table" id="AffiliationsTable">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Start</th>
+                <th>End</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><h4>Student Applicant<br><small> </small></h4></td>
+                <td><h5>2012-07-07</h5></td>
+                <td><h5>Present</h5></td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+  </div>
+  <!-- Notes -->
+  <div class="row">
+    <div class="col-lg-12">  
+      <div class="accordion" id="accordion2-notes">
+        <div class="accordion-group">
+          <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2-notes" href="#collapseOne-notes">
+              <h4 id="notes">Notes<span class="label label-info pull-right">0</span></h4>
+            </a>
+          </div>
+          <div id="collapseOne-notes" class="accordion-body collapse">
+            <div class="accordion-inner">
+              <table cellpadding="0" cellspacing="0" border="0" class="table" id="NotesTable">
+                <thead>
+                  <tr>
+                    <th>Created</th>
+                    <th>Note Type</th>
+                    <th>Creator</th>
+                    <th>Note</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="row">
+                <div class="col-lg-4 col-offset-8">                      
+                  <button class="btn btn-success btn-block " type="button">Add Note</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Accounts -->
+  <div class="row">
+    <div class="col-lg-12">  
+      <div class="accordion" id="accounts-accordion">
+        <div class="accordion-group">
+          <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accounts-accordion" href="#accounts-accordion-data">
+              <h4 id="accounts">Accounts<span class="label label-info pull-right">10</span></h4>
+            </a>
+          </div>
+          <div id="accounts-accordion-data" class="accordion-body collapse in">
+            <div class="accordion-inner">
+              <div id="AccountDataTable"></div>
+                <div class="row">
+                  <div class="col-lg-4 col-offset-8">                      
+                    <button class="btn btn-success btn-block " type="button">Add Account</button>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> <!-- /container --> 
+
+<!-- View User Photo -->
+<div class="modal fade" id="user-photo-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        &nbsp;<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img src="images/no_image.jpg" alt="User picture" id="user-picture" >
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal --> 
+
+<!-- Update Primary Email Address -->
+<div class="modal fade" id="email-edit-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Edit Primary Email Address</h4>
+      </div>
+      <div class="modal-body">
+        <p>
+          <label for="PrimaryEmailEdit">Primary email address</label>
+          <select id="PrimaryEmailEdit" class="form-control input-lg" disabled>
+            <option>No active email accounts found</option>
+          </select>
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- Modify Names -->
+<div class="modal fade" id="name-edit-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Edit Display Names</h4>
+      </div>
+      <div class="modal-body">
+        <div class="well">
+          <label for="official-names-well">Official Name Data</label>
+          <div class="row" id="official-names-well">
+            <div class="col-lg-4">
+              <h4>First Name</h4>
+              Henry
+            </div>
+            <div class="col-lg-4">
+              <h4>Middle Name</h4>
+              E
+            </div>
+            <div class="col-lg-4">
+              <h4>Last Name</h4>
+              Jones
+            </div>
+          </div>
+        </div> <!-- /well -->
+      </div>
+      <div class="row">
+          <div class="col-8 col-offset-2">
+            <form role="form">
+              <fieldset>
+                <div class="form-group">
+                  <label for="edit-first-name">First Name</label>
+                  <input type="text" class="form-control" id="edit-first-name" value="Mutt">
+                </div>
+                <div class="form-group">
+                  <label for="edit-middle-name">Middle Name</label>
+                  <input type="text" class="form-control" id="edit-middle-name" >
+                </div>
+                <div class="form-group">
+                  <label for="edit-last-name">Last Name</label>
+                  <input type="text" class="form-control" id="edit-last-name" value="Williams">
+                </div>
+              </fieldset>
+            </form>
+
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/datatables/media/js/jquery.dataTables.js"></script>
+    <script src="bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+    
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/ColVis.js"></script>
+    <!-- endbuild -->
+    
+    <script>
+      $('#GAtooltip').tooltip();
+      $('#VPNtooltip').tooltip();
+      $('#WiFitooltip').tooltip();
+      $(document).ready(function() {
+            $.extend( $.fn.dataTableExt.oStdClasses, {
+              "sWrapper": "dataTables_wrapper form-inline"
+            } );
+            $('#ad-attrib-table').dataTable({"sDom": "<'row'<'col-lg-6'l><'col-lg-6'f>r>t<'row'<'col-lg-6'i><'col-lg-6'p>>"});
+            $('#NotesTable').dataTable({"sDom": "<'row'<'col-lg-6'l><'col-lg-6'f>r>t<'row'<'col-lg-6'i><'col-lg-6'p>>"});
+            $('#AffiliationsTable').dataTable({
+                "sDom": "<'row'<'col-lg-6'l><'col-lg-6'f>r>t<'row'<'col-lg-6'i><'col-lg-6'p>>",
+                "iDisplayLength": 5, 
+                "aaSorting": [[1,'desc'],[2,'asc']],
+                "bFilter": false,
+                "bLengthChange": false,
+                "bSort": false,
+                "bInfo": false,
+                "sPaginationType": "bootstrap"
+            });
+            $('#AccountDataTable').html( '<table cellpadding="0" cellspacing="0" border="0" class="table table-striped" id="example"></table>' );
+            $('#example').dataTable( {
+                "sDom": "<'row'<'col-lg-6'l><'col-lg-6'f>r>t<'row'<'col-lg-6'i><'col-lg-6'p>>",
+                "sPaginationType": "bootstrap",
+                "iDisplayLength": 5,
+                "aLengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]],
+                "oLanguage": {
+                  "sSearch": "Filter:"
+                },
+                "aaData": [ ],
+                "aoColumns": [
+                    { "sTitle": "Account" },
+                    { "sTitle": "Type" },
+                    { "sTitle": "Status" },
+                    { "sTitle": "" }
+                ]
+            } );   
+      } );
+    </script>
+</body>
+</html>
