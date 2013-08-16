@@ -11,12 +11,13 @@
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <!-- build:css({.tmp,app}) styles/main.css -->
+        
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="bower_components/datatables/media/css/jquery.dataTables.css">
+  
+        <!-- build:css({.tmp,app}) styles/main.css -->
         <link rel="stylesheet" href="styles/ColVis.css">
-
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
   </head>
@@ -53,9 +54,8 @@
 
   <div class="container">
     <ul class="breadcrumb">
-      <li><a href="#">Home</a></li>
-      <li><a href="search.html">Search</a></li>
-      <li><a href="results.html">fn:indiana</a></li>
+      <li><a href="index.html">Search</a></li>
+      <li><a href="results.html">Results</a></li>
       <li class="active">badge:1028370</li>
     </ul>
     <div class="row">
@@ -147,7 +147,7 @@
                             <i class="icon-pencil pull-right"></i>
                           </a>
                         </h4>
-                      </dt><dd></dd>
+                      </dt><dd>--</dd>
                       <dt>
                         <h4 class="biodem-attrib-title">
                           Last Name
@@ -327,273 +327,266 @@
                     </tr>
                   </thead>
                   <tbody>
-                
-<tr>
-  <td>objectclass</td>
-  <td>top <br>person <br>organizationalPerson <br>user <br>
-  </td>
-</tr>
-<tr>
-  <td>cn</td>
-  <td>Jones, Indiana [indiana]
-  </td>
-</tr>
-<tr>
-  <td>sn</td>
-  <td>Jones
-  </td>
-</tr>
-<tr>
-  <td>title</td>
-  <td>Assistant Director
-  </td>
-</tr>
-<tr>
-  <td>description</td>
-  <td>Security
-  </td>
-</tr>
-<tr>
-  <td>physicaldeliveryofficename</td>
-  <td>LIB618
-  </td>
-</tr>
-<tr>
-  <td>telephonenumber</td>
-  <td>813-123-4567
-  </td>
-</tr>
-<tr>
-  <td>givenname</td>
-  <td>Indiana
-  </td>
-</tr>
-<tr>
-  <td>distinguishedname</td>
-  <td>CN=Jones\, Indiana [indiana],OU=Archaeology,OU=Colleges and Departments,DC=forest,DC=usf,DC=edu
-  </td>
-</tr>
-<tr>
-  <td>whencreated</td>
-  <td>20090217223617.0Z
-  </td>
-</tr>
-<tr>
-  <td>whenchanged</td>
-  <td>20130814180520.0Z
-  </td>
-</tr>
-<tr>
-  <td>displayname</td>
-  <td>Jones, Indiana
-  </td>
-</tr>
-<tr>
-  <td>memberof</td>
-  <td>CN=IT MSSQL Database Contacts,OU=Distribution Groups,DC=forest,DC=usf,DC=edu <br>CN=IT-Splunk Admins,OU=Security Groups,DC=forest,DC=usf,DC=edu <br>CN=IT OPS Staff Mailbox Group,OU=Distribution Groups,DC=forest,DC=usf,DC=edu <br>CN=WWW System IT Management,OU=WWW,OU=Groups,OU=Admin,DC=fastmail,DC=usf,DC=edu <br>CN=IT-Forest Contacts,OU=Security Groups,DC=forest,DC=usf,DC=edu <br>CN=CIMS.T.NULL.Staff,OU=Role,OU=Groups,OU=Students,DC=forest,DC=usf,DC=edu <br>CN=AA URO DegreeWorks User Group DL,OU=Distribution Groups,DC=forest,DC=usf,DC=edu <br>CN=CIMS.T.Staff,OU=Role,OU=Groups,OU=Students,DC=forest,DC=usf,DC=edu <br>CN=O-IT-SEC-IdMPO,OU=O Drive Groups,OU=Security Groups,DC=forest,DC=usf,DC=edu <br>CN=CIMS.NULL.Staff,OU=Role,OU=Groups,OU=Students,DC=forest,DC=usf,DC=edu <br>CN=CIMS.T.NULL.2754.Staff,OU=Role,OU=Groups,OU=Students,DC=forest,DC=usf,DC=edu <br>CN=Domain Users,CN=Users,DC=forest,DC=usf,DC=edu <br>
-  </td>
-</tr>
-<tr>
-  <td>department</td>
-  <td>Archaeology
-  </td>
-</tr>
-<tr>
-  <td>company</td>
-  <td>Arts & Sciences
-  </td>
-</tr>
-<tr>
-  <td>proxyaddresses</td>
-  <td>X500:/o=USF/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Recipients/cn=indiana <br>x500:/o=ExchangeLabs/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Recipients/cn=ec37c2c0a84a42fbb6d483a4461fe71b-Jones, Indiana <br>SMTP:indiana@usf.edu <br>smtp:indiana@usfedu.mail.onmicrosoft.com <br>X400:C=US;A= ;P=USF;O=ADMIN;S=Jones;G=Indiana; <br>
-  </td>
-</tr>
-<tr>
-  <td>targetaddress</td>
-  <td>SMTP:indiana@usfedu.mail.onmicrosoft.com
-  </td>
-</tr>
-<tr>
-  <td>extensionattribute1</td>
-  <td>1028370
-  </td>
-</tr>
-<tr>
-  <td>mailnickname</td>
-  <td>indiana
-  </td>
-</tr>
-<tr>
-  <td>extensionattribute11</td>
-  <td>000000242117
-  </td>
-</tr>
-<tr>
-  <td>useraccountcontrol</td>
-  <td>512
-  </td>
-</tr>
-<tr>
-  <td>badpwdcount</td>
-  <td>0
-  </td>
-</tr>
-<tr>
-  <td>employeeid</td>
-  <td>000000242117
-  </td>
-</tr>
-<tr>
-  <td>homedirectory</td>
-  <td>\\forest.usf.edu\data\udrive\indiana
-  </td>
-</tr>
-<tr>
-  <td>homedrive</td>
-  <td>U:
-  </td>
-</tr>
-<tr>
-  <td>badpasswordtime</td>
-  <td>130209572021859310
-  </td>
-</tr>
-<tr>
-  <td>lastlogon</td>
-  <td>130210819437455509
-  </td>
-</tr>
-<tr>
-  <td>pwdlastset</td>
-  <td>130163147656929298
-  </td>
-</tr>
-<tr>
-  <td>accountexpires</td>
-  <td>9223372036854775807
-  </td>
-</tr>
-<tr>
-  <td>logoncount</td>
-  <td>162
-  </td>
-</tr>
-<tr>
-  <td>samaccountname</td>
-  <td>indiana
-  </td>
-</tr>
-<tr>
-  <td>userprincipalname</td>
-  <td>indiana@usf.edu
-  </td>
-</tr>
-<tr>
-  <td>lockouttime</td>
-  <td>0
-  </td>
-</tr>
-<tr>
-  <td>lastlogontimestamp</td>
-  <td>130204727030734393
-  </td>
-</tr>
-<tr>
-  <td>mail</td>
-  <td>indiana@usf.edu
-  </td>
-</tr>
-<tr>
-  <td>uidnumber</td>
-  <td>1028370
-  </td>
-</tr>
-<tr>
-  <td>gidnumber</td>
-  <td>10001
-  </td>
-</tr>
-<tr>
-  <td>unixhomedirectory</td>
-  <td>/home/i/indiana
-  </td>
-</tr>
-<tr>
-  <td>loginshell</td>
-  <td>/bin/bash
-  </td>
-</tr>
-<tr>
-  <td>msexchuseraccountcontrol</td>
-  <td>0
-  </td>
-</tr>
-<tr>
-  <td>usfeduunumber</td>
-  <td>U89435271
-  </td>
-</tr>
-<tr>
-  <td>edupersonprimaryaffiliation</td>
-  <td>Faculty
-  </td>
-</tr>
-<tr>
-  <td>usfedunamsid</td>
-  <td>1028370
-  </td>
-</tr>
-<tr>
-  <td>edupersonentitlement</td>
-  <td>usf:it:accounts:exchange <br>usf:it:accounts:peoplesoftss <br>usf:it:accounts:peoplesoftfm <br>usf:it:accounts:activedirectory <br>usf:it:accounts:gmail <br>usf:it:accounts:unix <br>usf:it:accounts:netid <br>usf:tampa:no_college:information_technology:staff <br>usf:tampa:no_college:information_technology <br>usf:tampa:no_college:staff <br>usf:information_technology:staff <br>usf:no_college:staff <br>usf:no_college:information_technology <br>usf:tampa:staff <br>usf:tampa:information_technology <br>usf:tampa:no_college <br>usf:staff <br>usf:information_technology <br>usf:no_college <br>usf:tampa <br>itMessageserviceUser <br>itNetworkWirelessreporter <br>itJiraUser <br>itNams_wsAdlookup <br>itNams_wsVip <br>itNamsSupersponsor <br>itNamsSponsor <br>itVipUser <br>itWs-activatenetidUser <br>itWs-identityUser <br>itNams_wsConvert <br>itNamsLdap <br>itPrSupervisor <br>itActivedirGroupmanager <br>itNams_wsValidstaff <br>itNams_wsUpdatehosts <br>itZendAdmin <br>itNamsProvisioner <br>itNamsSuper <br>
-  </td>
-</tr>
-<tr>
-  <td>msexchwhenmailboxcreated</td>
-  <td>20121114040137.0Z
-  </td>
-</tr>
-<tr>
-  <td>usfeduprimarydepartment</td>
-  <td>Archaeology
-  </td>
-</tr>
-<tr>
-  <td>usfedudepartment</td>
-  <td>Archaeology
-  </td>
-</tr>
-<tr>
-  <td>usfeduaffiliation</td>
-  <td>Faculty : Archaeology
-  </td>
-</tr>
-<tr>
-  <td>edupersonaffiliation</td>
-  <td>member <br>faculty <br>
-  </td>
-</tr>
-<tr>
-  <td>usfeduprimaryaffiliation</td>
-  <td>Faculty
-  </td>
-</tr>
-<tr>
-  <td>usfeducampus</td>
-  <td>Tampa
-  </td>
-</tr>
-<tr>
-  <td>usfedunetid</td>
-  <td>indiana <br>henryjones <br>
-  </td>
-</tr>
-
-
-
-
-
-
+                    <tr>
+                      <td>objectclass</td>
+                      <td>top <br>person <br>organizationalPerson <br>user <br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>cn</td>
+                      <td>Jones, Indiana [indiana]
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>sn</td>
+                      <td>Jones
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>title</td>
+                      <td>Assistant Director
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>description</td>
+                      <td>Security
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>physicaldeliveryofficename</td>
+                      <td>LIB618
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>telephonenumber</td>
+                      <td>813-123-4567
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>givenname</td>
+                      <td>Indiana
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>distinguishedname</td>
+                      <td>CN=Jones\, Indiana [indiana],OU=Archaeology,OU=Colleges and Departments,DC=forest,DC=usf,DC=edu
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>whencreated</td>
+                      <td>20090217223617.0Z
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>whenchanged</td>
+                      <td>20130814180520.0Z
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>displayname</td>
+                      <td>Jones, Indiana
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>memberof</td>
+                      <td>CN=IT MSSQL Database Contacts,OU=Distribution Groups,DC=forest,DC=usf,DC=edu <br>CN=IT-Splunk Admins,OU=Security Groups,DC=forest,DC=usf,DC=edu <br>CN=IT OPS Staff Mailbox Group,OU=Distribution Groups,DC=forest,DC=usf,DC=edu <br>CN=WWW System IT Management,OU=WWW,OU=Groups,OU=Admin,DC=fastmail,DC=usf,DC=edu <br>CN=IT-Forest Contacts,OU=Security Groups,DC=forest,DC=usf,DC=edu <br>CN=CIMS.T.NULL.Staff,OU=Role,OU=Groups,OU=Students,DC=forest,DC=usf,DC=edu <br>CN=AA URO DegreeWorks User Group DL,OU=Distribution Groups,DC=forest,DC=usf,DC=edu <br>CN=CIMS.T.Staff,OU=Role,OU=Groups,OU=Students,DC=forest,DC=usf,DC=edu <br>CN=O-IT-SEC-IdMPO,OU=O Drive Groups,OU=Security Groups,DC=forest,DC=usf,DC=edu <br>CN=CIMS.NULL.Staff,OU=Role,OU=Groups,OU=Students,DC=forest,DC=usf,DC=edu <br>CN=CIMS.T.NULL.2754.Staff,OU=Role,OU=Groups,OU=Students,DC=forest,DC=usf,DC=edu <br>CN=Domain Users,CN=Users,DC=forest,DC=usf,DC=edu <br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>department</td>
+                      <td>Archaeology
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>company</td>
+                      <td>Arts & Sciences
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>proxyaddresses</td>
+                      <td>X500:/o=USF/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Recipients/cn=indiana <br>x500:/o=ExchangeLabs/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Recipients/cn=ec37c2c0a84a42fbb6d483a4461fe71b-Jones, Indiana <br>SMTP:indiana@usf.edu <br>smtp:indiana@usfedu.mail.onmicrosoft.com <br>X400:C=US;A= ;P=USF;O=ADMIN;S=Jones;G=Indiana; <br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>targetaddress</td>
+                      <td>SMTP:indiana@usfedu.mail.onmicrosoft.com
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>extensionattribute1</td>
+                      <td>1028370
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>mailnickname</td>
+                      <td>indiana
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>extensionattribute11</td>
+                      <td>000000242117
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>useraccountcontrol</td>
+                      <td>512
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>badpwdcount</td>
+                      <td>0
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>employeeid</td>
+                      <td>000000242117
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>homedirectory</td>
+                      <td>\\forest.usf.edu\data\udrive\indiana
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>homedrive</td>
+                      <td>U:
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>badpasswordtime</td>
+                      <td>130209572021859310
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>lastlogon</td>
+                      <td>130210819437455509
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>pwdlastset</td>
+                      <td>130163147656929298
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>accountexpires</td>
+                      <td>9223372036854775807
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>logoncount</td>
+                      <td>162
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>samaccountname</td>
+                      <td>indiana
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>userprincipalname</td>
+                      <td>indiana@usf.edu
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>lockouttime</td>
+                      <td>0
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>lastlogontimestamp</td>
+                      <td>130204727030734393
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>mail</td>
+                      <td>indiana@usf.edu
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>uidnumber</td>
+                      <td>1028370
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>gidnumber</td>
+                      <td>10001
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>unixhomedirectory</td>
+                      <td>/home/i/indiana
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>loginshell</td>
+                      <td>/bin/bash
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>msexchuseraccountcontrol</td>
+                      <td>0
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>usfeduunumber</td>
+                      <td>U89435271
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>edupersonprimaryaffiliation</td>
+                      <td>Faculty
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>usfedunamsid</td>
+                      <td>1028370
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>edupersonentitlement</td>
+                      <td>usf:it:accounts:exchange <br>usf:it:accounts:peoplesoftss <br>usf:it:accounts:peoplesoftfm <br>usf:it:accounts:activedirectory <br>usf:it:accounts:gmail <br>usf:it:accounts:unix <br>usf:it:accounts:netid <br>usf:tampa:no_college:information_technology:staff <br>usf:tampa:no_college:information_technology <br>usf:tampa:no_college:staff <br>usf:information_technology:staff <br>usf:no_college:staff <br>usf:no_college:information_technology <br>usf:tampa:staff <br>usf:tampa:information_technology <br>usf:tampa:no_college <br>usf:staff <br>usf:information_technology <br>usf:no_college <br>usf:tampa <br>itMessageserviceUser <br>itNetworkWirelessreporter <br>itJiraUser <br>itNams_wsAdlookup <br>itNams_wsVip <br>itNamsSupersponsor <br>itNamsSponsor <br>itVipUser <br>itWs-activatenetidUser <br>itWs-identityUser <br>itNams_wsConvert <br>itNamsLdap <br>itPrSupervisor <br>itActivedirGroupmanager <br>itNams_wsValidstaff <br>itNams_wsUpdatehosts <br>itZendAdmin <br>itNamsProvisioner <br>itNamsSuper <br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>msexchwhenmailboxcreated</td>
+                      <td>20121114040137.0Z
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>usfeduprimarydepartment</td>
+                      <td>Archaeology
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>usfedudepartment</td>
+                      <td>Archaeology
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>usfeduaffiliation</td>
+                      <td>Faculty : Archaeology
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>edupersonaffiliation</td>
+                      <td>member <br>faculty <br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>usfeduprimaryaffiliation</td>
+                      <td>Faculty
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>usfeducampus</td>
+                      <td>Tampa
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>usfedunetid</td>
+                      <td>indiana <br>henryjones <br>
+                      </td>
+                    </tr>
                   </tbody>
                 </table> 
               </div>
@@ -730,7 +723,11 @@
                   </tr>
                 </tbody>
               </table>
-              <br><button class="btn btn-success pull-right" style="margin-top: 15px;" type="button">Add Note</button>
+              <div class="row">
+                <div class="col-lg-4 col-offset-8">                      
+                  <button class="btn btn-success btn-block " type="button">Add Note</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -739,14 +736,28 @@
   </div>
   <!-- Accounts -->
   <div class="row">
-    <div class="col-lg-12">
-      <h2 id="accounts">Accounts</h2>
-      <div id="AccountDataTable"></div> 
-      <p><br><button class="btn btn-success pull-right" style="margin-top: 15px;" type="button">Add Account</button></p>     
+    <div class="col-lg-12">  
+      <div class="accordion" id="accounts-accordion">
+        <div class="accordion-group">
+          <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accounts-accordion" href="#accounts-accordion-data">
+              <h4 id="accounts">Accounts<span class="label label-info pull-right">10</span></h4>
+            </a>
+          </div>
+          <div id="accounts-accordion-data" class="accordion-body collapse in">
+            <div class="accordion-inner">
+              <div id="AccountDataTable"></div>
+                <div class="row">
+                  <div class="col-lg-4 col-offset-8">                      
+                    <button class="btn btn-success btn-block " type="button">Add Account</button>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <hr>
-  <footer>      </footer>
 </div> <!-- /container --> 
 
 <!-- View User Photo -->
@@ -861,10 +872,10 @@
             $.extend( $.fn.dataTableExt.oStdClasses, {
               "sWrapper": "dataTables_wrapper form-inline"
             } );
-            $('#ad-attrib-table').dataTable();
-            $('#NotesTable').dataTable();
+            $('#ad-attrib-table').dataTable({"sDom": "<'row'<'col-lg-6'l><'col-lg-6'f>r>t<'row'<'col-lg-6'i><'col-lg-6'p>>"});
+            $('#NotesTable').dataTable({"sDom": "<'row'<'col-lg-6'l><'col-lg-6'f>r>t<'row'<'col-lg-6'i><'col-lg-6'p>>"});
             $('#AffiliationsTable').dataTable({
-                "sDom": "<'row'<'span6'l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
+                "sDom": "<'row'<'col-lg-6'l><'col-lg-6'f>r>t<'row'<'col-lg-6'i><'col-lg-6'p>>",
                 "iDisplayLength": 5, 
                 "aaSorting": [[1,'desc'],[2,'asc']],
                 "bFilter": false,
@@ -875,7 +886,7 @@
             });
             $('#AccountDataTable').html( '<table cellpadding="0" cellspacing="0" border="0" class="table table-striped" id="example"></table>' );
             $('#example').dataTable( {
-                "sDom": "<'row'<'span6'l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
+                "sDom": "<'row'<'col-lg-6'l><'col-lg-6'f>r>t<'row'<'col-lg-6'i><'col-lg-6'p>>",
                 "sPaginationType": "bootstrap",
                 "iDisplayLength": 5,
                 "aLengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]],
